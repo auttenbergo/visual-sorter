@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Chart from './Chart';
 import Controls from './Controls';
-import {selectionSort, insertionSort, bubbleSort, mergeSort, quickSort} from './SortingHelpers';
+import {selectionSort, insertionSort, bubbleSort, mergeSort} from './SortingHelpers';
 import './App.css';
 
-const algorithms = ['Selection Sort', 'Insertion Sort', 'Bubble Sort', 'Merge Sort', 'Quick Sort'];
+const algorithms = ['Selection Sort', 'Insertion Sort', 'Bubble Sort', 'Merge Sort'];
 const barStyles = ['bottom', 'middle', 'top'];
 
 const App = () => {
@@ -40,9 +40,6 @@ const App = () => {
                 break;
             case 'Merge Sort':
                 await mergeSort(array, setArray, sortSpeed, 0, null, getCancelled);
-                break;
-            case 'Quick Sort':
-                await quickSort(array, setArray, sortSpeed, 0, null, getCancelled);
                 break;
             default:
                 break;
